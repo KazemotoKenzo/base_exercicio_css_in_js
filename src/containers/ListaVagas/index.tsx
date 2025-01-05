@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import FormVagas from '../../components/FormVagas'
-
 import Vaga from '../../components/Vaga'
 
-import styles from './ListaVagas.module.css'
+import { VagasUl } from './styles'
 
 type Vaga = {
   id: string
@@ -99,20 +98,20 @@ const ListaVagas = () => {
   return (
     <div>
       <FormVagas aoPesquisar={(termo: string) => setFiltro(termo)} />
-      <ul className={styles.vagas}>
-        {vagasFiltradas.map((vag) => (
+      <VagasUl>
+        {vagasFiltradas.map((vaga) => (
           <Vaga
-            key={vag.id}
-            titulo={vag.titulo}
-            localizacao={vag.localizacao}
-            nivel={vag.nivel}
-            modalidade={vag.modalidade}
-            salarioMin={vag.salarioMin}
-            salarioMax={vag.salarioMax}
-            requisitos={vag.requisitos}
+            key={vaga.id}
+            titulo={vaga.titulo}
+            localizacao={vaga.localizacao}
+            nivel={vaga.nivel}
+            modalidade={vaga.modalidade}
+            salarioMin={vaga.salarioMin}
+            salarioMax={vaga.salarioMax}
+            requisitos={vaga.requisitos}
           />
         ))}
-      </ul>
+      </VagasUl>
     </div>
   )
 }
