@@ -1,3 +1,4 @@
+import React from 'react'
 import { VagaLi, VagaTitulo, VagaLink } from './styles'
 
 type Props = {

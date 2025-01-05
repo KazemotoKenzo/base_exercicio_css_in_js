@@ -1,3 +1,4 @@
+import React from 'react'
 import { Form, FormContainer, Title } from './styles'
 
 const Hero = () => (
